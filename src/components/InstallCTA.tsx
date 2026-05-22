@@ -34,13 +34,13 @@ export default function InstallCTA() {
         >
           <div className="grid lg:grid-cols-[1fr_auto] gap-0">
             {/* Content */}
-            <div className="p-6 sm:p-10 flex flex-col gap-6">
+            <div className="p-5 sm:p-10 flex flex-col gap-5 sm:gap-6">
               <div>
                 <span className="inline-flex items-center gap-1.5 bg-blue-700/80 text-white text-[11px] font-extrabold px-3 py-1 rounded uppercase tracking-widest mb-4">
                   <i className="bi bi-tools text-xs" />
                   Instalacao
                 </span>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gradient-white mb-3 leading-tight">
+                <h2 className="text-xl sm:text-3xl lg:text-4xl font-heading font-bold text-gradient-white mb-3 leading-tight">
                   Instale seu{" "}
                   <span className="text-gradient">Ar&#8209;Condicionado</span>
                   <br />
@@ -64,22 +64,22 @@ export default function InstallCTA() {
             </div>
 
             {/* CTA side */}
-            <div className="bg-gradient-to-b from-blue-700/20 to-blue-900/20 border-t lg:border-t-0 lg:border-l border-blue-500/15 p-6 sm:p-10 flex flex-col items-center justify-center gap-5 text-center min-w-[230px]">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-400 flex items-center justify-center shadow-xl shadow-blue-500/30">
-                <i className="bi bi-wind text-white text-2xl" />
+            <div className="bg-gradient-to-b from-blue-700/20 to-blue-900/20 border-t lg:border-t-0 lg:border-l border-blue-500/15 p-5 sm:p-8 flex flex-col items-center justify-center gap-4 text-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-400 flex items-center justify-center shadow-xl shadow-blue-500/30">
+                <i className="bi bi-wind text-white text-xl sm:text-2xl" />
               </div>
 
               <div>
-                <p className="text-white font-bold text-base sm:text-lg mb-1">Orcamento Gratis</p>
+                <p className="text-white font-bold text-sm sm:text-lg mb-1">Orcamento Gratis</p>
                 <p className="text-slate-400 text-xs sm:text-sm">Sem compromisso, resposta rapida</p>
               </div>
 
-              <div className="relative inline-flex w-full sm:w-auto">
+              <div className="relative inline-flex w-full">
                 <span className="absolute inset-0 rounded-xl bg-blue-500/50 animate-ping" />
                 <span className="absolute inset-0 rounded-xl bg-sky-400/25 animate-ping" style={{ animationDelay: "0.4s" }} />
                 <button
                   onClick={handleWhatsApp}
-                  className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-400 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.02] transition-all duration-300 cursor-pointer min-h-[48px] whitespace-nowrap"
+                  className="relative w-full inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-400 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.02] transition-all duration-300 cursor-pointer min-h-[48px] whitespace-nowrap"
                 >
                   <i className="bi bi-whatsapp text-green-400" />
                   Solicitar Instalacao

@@ -42,20 +42,20 @@ export default function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10 sm:mb-16"
+          className="text-center mb-8 sm:mb-14"
         >
           <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
             Como funciona
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-3">
             Processo <span className="text-gradient">simples</span> e transparente
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto text-base">
+          <p className="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
             Do contato ao servico finalizado em poucos passos. Sem burocracia, sem surpresas.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 relative">
           {/* Connecting line desktop */}
           <div className="hidden lg:block absolute top-14 left-[10%] right-[10%] h-px bg-gradient-to-r from-blue-500/0 via-blue-500/30 to-blue-500/0" />
 
