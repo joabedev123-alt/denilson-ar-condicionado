@@ -71,7 +71,7 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-slate-300 hover:text-white transition-colors cursor-pointer p-1"
+            className="md:hidden text-slate-300 hover:text-white transition-colors cursor-pointer p-2 -mr-1 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Menu"
           >
             <i className={`bi text-2xl ${menuOpen ? "bi-x-lg" : "bi-list"}`} />

@@ -6,7 +6,7 @@ import { WHATSAPP_URL } from "@/lib/constants"
 
 export default function FinalCTA() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-14 sm:py-24 relative overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
@@ -24,7 +24,7 @@ export default function FinalCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-violet-600/8 blur-[120px] animate-glow-pulse" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export default function FinalCTA() {
             </div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
             <span className="text-gradient-white">Pronto para ter seu</span>
             <br />
             <span className="text-gradient">ar-condicionado</span>
@@ -51,12 +51,12 @@ export default function FinalCTA() {
             Atendimento rapido, profissional e com garantia de qualidade.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-violet-500/50 hover:scale-[1.04] transition-all duration-300 cursor-pointer"
+              className="group flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold text-base sm:text-lg hover:shadow-2xl hover:shadow-violet-500/50 hover:scale-[1.04] transition-all duration-300 cursor-pointer min-h-[52px]"
             >
               <i className="bi bi-whatsapp text-xl text-green-400" />
               Falar no WhatsApp
@@ -64,7 +64,7 @@ export default function FinalCTA() {
             </a>
             <a
               href="#contato"
-              className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl glass border border-violet-500/25 text-violet-300 font-semibold text-lg hover:border-violet-400/45 hover:bg-violet-500/10 transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 rounded-2xl glass border border-violet-500/25 text-violet-300 font-semibold text-base sm:text-lg hover:border-violet-400/45 hover:bg-violet-500/10 transition-all duration-300 cursor-pointer min-h-[52px]"
             >
               <i className="bi bi-clipboard-check" />
               Solicitar Orcamento

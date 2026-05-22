@@ -33,12 +33,12 @@ export default function QuoteForm() {
     "w-full bg-[#0A0525] border border-violet-500/15 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-violet-400/50 focus:ring-1 focus:ring-violet-400/30 transition-all duration-200"
 
   return (
-    <section id="contato" className="py-24 relative overflow-hidden">
+    <section id="contato" className="py-14 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -49,7 +49,7 @@ export default function QuoteForm() {
             <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
               Orcamento gratis
             </p>
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gradient-white leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white leading-tight mb-6">
               Solicite seu
               <br />
               <span className="text-gradient">orcamento agora</span>

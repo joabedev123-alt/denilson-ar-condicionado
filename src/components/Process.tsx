@@ -31,22 +31,22 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="processo" className="py-24 relative overflow-hidden">
+    <section id="processo" className="py-14 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
             Como funciona
           </p>
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
             Processo <span className="text-gradient">simples</span>
             <br />e transparente
           </h2>

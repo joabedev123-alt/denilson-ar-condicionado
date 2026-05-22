@@ -23,7 +23,7 @@ export default function Footer() {
     <footer className="relative border-t border-violet-500/10">
       <div className="absolute inset-0 bg-gradient-to-b from-[#07041A] to-[#030610]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="space-y-4">

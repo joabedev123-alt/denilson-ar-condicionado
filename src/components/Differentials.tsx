@@ -14,12 +14,12 @@ const differentials = [
 
 export default function Differentials() {
   return (
-    <section id="diferenciais" className="py-24 relative overflow-hidden">
+    <section id="diferenciais" className="py-14 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#07041A] to-[#0D0630]" />
       <div className="absolute top-1/2 left-0 w-96 h-96 rounded-full bg-violet-600/5 blur-[100px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -30,7 +30,7 @@ export default function Differentials() {
             <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
               Nossos diferenciais
             </p>
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gradient-white leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white leading-tight mb-6">
               Por que somos a
               <br />
               <span className="text-gradient">melhor escolha</span>

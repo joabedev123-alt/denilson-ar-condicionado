@@ -19,21 +19,21 @@ const regions = [
 
 export default function Regions() {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-12 sm:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#07041A] via-[#0D0630] to-[#07041A]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
           <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
             Area de atendimento
           </p>
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-gradient-white mb-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gradient-white mb-3">
             Atendemos sua <span className="text-gradient">regiao</span>
           </h2>
           <p className="text-slate-400 text-base max-w-lg mx-auto">

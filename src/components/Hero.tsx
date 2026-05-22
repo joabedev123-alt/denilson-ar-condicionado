@@ -82,24 +82,24 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 pb-14 sm:pb-20 w-full">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
           {/* Left */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {/* Badge */}
             <motion.div
               custom={0} variants={fadeUp} initial="hidden" animate="visible"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-violet-500/25 text-violet-300 text-sm font-medium"
+              className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass border border-violet-500/25 text-violet-300 text-xs sm:text-sm font-medium"
             >
-              <span className="w-2 h-2 rounded-full bg-violet-400 animate-glow-pulse" />
+              <span className="w-2 h-2 rounded-full bg-violet-400 animate-glow-pulse flex-shrink-0" />
               Tecnicos especializados disponiveis
             </motion.div>
 
             {/* Headline */}
             <motion.h1
               custom={1} variants={fadeUp} initial="hidden" animate="visible"
-              className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold leading-[1.05] tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold leading-[1.05] tracking-tight"
             >
               <span className="text-gradient-white">Seu Ar-Condicionado</span>
               <br />
@@ -111,7 +111,7 @@ export default function Hero() {
             {/* Subheadline */}
             <motion.p
               custom={2} variants={fadeUp} initial="hidden" animate="visible"
-              className="text-lg text-slate-400 leading-relaxed max-w-xl"
+              className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl"
             >
               Manutencao, limpeza e instalacao profissional com atendimento rapido
               e garantia de qualidade. Seu conforto e nossa prioridade.
@@ -120,11 +120,11 @@ export default function Hero() {
             {/* CTAs */}
             <motion.div
               custom={3} variants={fadeUp} initial="hidden" animate="visible"
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
             >
               <a
                 href="#contato"
-                className="group flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold text-base hover:shadow-2xl hover:shadow-violet-500/40 hover:scale-[1.03] transition-all duration-300 cursor-pointer"
+                className="group flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold text-base hover:shadow-2xl hover:shadow-violet-500/40 hover:scale-[1.03] transition-all duration-300 cursor-pointer min-h-[48px]"
               >
                 <i className="bi bi-clipboard-check text-lg" />
                 Solicitar Orcamento
@@ -134,7 +134,7 @@ export default function Hero() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl glass border border-violet-500/25 text-violet-200 font-semibold text-base hover:border-violet-400/45 hover:bg-violet-500/10 transition-all duration-300 cursor-pointer"
+                className="flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl glass border border-violet-500/25 text-violet-200 font-semibold text-base hover:border-violet-400/45 hover:bg-violet-500/10 transition-all duration-300 cursor-pointer min-h-[48px]"
               >
                 <i className="bi bi-whatsapp text-lg text-green-400" />
                 Falar no WhatsApp
@@ -144,7 +144,7 @@ export default function Hero() {
             {/* Stats */}
             <motion.div
               custom={4} variants={fadeUp} initial="hidden" animate="visible"
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-1 sm:pt-2"
             >
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center sm:text-left">
