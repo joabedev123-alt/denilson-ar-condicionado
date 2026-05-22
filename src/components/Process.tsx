@@ -28,12 +28,6 @@ const steps = [
     title: "Servico Executado",
     description: "Com sua aprovacao, executamos o servico com qualidade e entregamos o equipamento funcionando perfeitamente.",
   },
-  {
-    number: "05",
-    icon: "bi-tools",
-    title: "Instalar Ar Condicionado",
-    description: "Realizamos a instalacao completa do seu aparelho com suporte, cabeamento e teste final para garantir o funcionamento perfeito.",
-  },
 ]
 
 export default function Process() {
@@ -61,7 +55,7 @@ export default function Process() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {/* Connecting line desktop */}
           <div className="hidden lg:block absolute top-14 left-[10%] right-[10%] h-px bg-gradient-to-r from-blue-500/0 via-blue-500/30 to-blue-500/0" />
 
