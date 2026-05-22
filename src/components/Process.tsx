@@ -1,6 +1,8 @@
 ﻿"use client"
 
+import Image from "next/image"
 import { motion } from "motion/react"
+import { WHATSAPP_URL } from "@/lib/constants"
 
 const steps = [
   {
@@ -86,6 +88,40 @@ export default function Process() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="relative mt-14 sm:mt-20 rounded-2xl overflow-hidden h-52 sm:h-72"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1552853160-8ec65527b252?w=1600&q=80&fit=crop&auto=format"
+            alt="Instalacao e manutencao de ar-condicionado em predio"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#020C1B]/88 via-[#020C1B]/45 to-transparent" />
+          <div className="absolute inset-0 flex items-center px-5 sm:px-14">
+            <div className="max-w-sm">
+              <p className="text-blue-400 text-xs font-medium uppercase tracking-widest mb-2">Servico de qualidade</p>
+              <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-4 leading-tight">
+                Atendimento profissional <span className="text-gradient">do inicio ao fim</span>
+              </h3>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-400 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+              >
+                <i className="bi bi-whatsapp" />
+                Agendar agora
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

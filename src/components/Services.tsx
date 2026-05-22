@@ -52,8 +52,8 @@ export default function Services() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80&fit=crop&auto=format"
-          alt=""
+          src="https://images.unsplash.com/photo-1682126012378-859ca7a9f4cf?w=1920&q=80&fit=crop&auto=format"
+          alt="Manutencao de ar-condicionado em predio"
           fill
           className="object-cover object-center"
           sizes="100vw"

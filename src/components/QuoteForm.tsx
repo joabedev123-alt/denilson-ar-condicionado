@@ -83,7 +83,7 @@ export default function QuoteForm() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7 }}
           >
-            <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8 glow-border space-y-5">
+            <form onSubmit={handleSubmit} className="glass-card rounded-2xl p-4 sm:p-8 glow-border space-y-4 sm:space-y-5">
               <div>
                 <label className="block text-slate-400 text-xs font-medium mb-1.5 uppercase tracking-wide">
                   Seu nome

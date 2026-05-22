@@ -121,81 +121,81 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
       style={{ rotateX, rotateY, transformPerspective: 1200 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`relative glass-card rounded-3xl overflow-hidden border ${plan.accentBorder} ${plan.accentHoverBorder} transition-all duration-300 shadow-xl ${plan.accentGlow} ${"featured" in plan && plan.featured ? "lg:scale-[1.06] lg:-translate-y-2" : ""} cursor-default`}
+      className={`relative glass-card rounded-2xl overflow-hidden border ${plan.accentBorder} ${plan.accentHoverBorder} transition-all duration-300 shadow-lg ${plan.accentGlow} ${"featured" in plan && plan.featured ? "lg:scale-[1.04] lg:-translate-y-1.5" : ""} cursor-default flex flex-col`}
     >
       {/* Top accent line */}
       <div
-        className="h-[2px] w-full"
+        className="h-[2px] w-full flex-shrink-0"
         style={{ background: `linear-gradient(90deg, transparent, ${plan.accentColor}CC, transparent)` }}
       />
 
       {/* Large background number */}
       <div
-        className="absolute -top-4 -right-2 font-heading font-black select-none pointer-events-none leading-none"
-        style={{ fontSize: "140px", color: plan.accentColor, opacity: 0.04 }}
+        className="absolute -top-2 -right-1 font-heading font-black select-none pointer-events-none leading-none"
+        style={{ fontSize: "100px", color: plan.accentColor, opacity: 0.04 }}
       >
         {plan.id}
       </div>
 
       {/* Inner glow spot */}
       <div
-        className="absolute top-0 right-0 w-40 h-40 rounded-full blur-[60px] pointer-events-none"
-        style={{ background: `${plan.accentColor}18` }}
+        className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[50px] pointer-events-none"
+        style={{ background: `${plan.accentColor}15` }}
       />
 
-      <div className="p-6 sm:p-7 relative z-10">
+      <div className="p-4 sm:p-5 relative z-10 flex flex-col flex-1">
         {/* Badge */}
-        <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs font-semibold mb-5 ${plan.badgeBg}`}>
-          <i className={`bi bi-lightning-charge ${plan.accentText} text-xs`} />
+        <div className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[11px] font-semibold mb-3 ${plan.badgeBg}`}>
+          <i className={`bi bi-lightning-charge ${plan.accentText} text-[10px]`} />
           {plan.badge}
         </div>
 
         {/* Icon + Name */}
-        <div className="flex items-center gap-3 mb-4">
-          <div className={`w-11 h-11 rounded-2xl glass border ${plan.accentBorder} flex items-center justify-center flex-shrink-0`}>
-            <i className={`bi ${plan.icon} ${plan.accentText} text-xl`} />
+        <div className="flex items-center gap-2.5 mb-2">
+          <div className={`w-9 h-9 rounded-xl glass border ${plan.accentBorder} flex items-center justify-center flex-shrink-0`}>
+            <i className={`bi ${plan.icon} ${plan.accentText} text-base`} />
           </div>
           <div>
-            <p className="text-slate-500 text-[10px] font-medium uppercase tracking-widest">Manutencao</p>
-            <h3 className="font-heading font-bold text-xl text-white leading-tight">{plan.name}</h3>
+            <p className="text-slate-500 text-[9px] font-medium uppercase tracking-widest leading-none mb-0.5">Manutencao</p>
+            <h3 className="font-heading font-bold text-lg text-white leading-tight">{plan.name}</h3>
           </div>
         </div>
 
-        <p className="text-slate-500 text-xs leading-relaxed mb-5">{plan.description}</p>
+        <p className="text-slate-500 text-xs leading-relaxed mb-3">{plan.description}</p>
 
         {/* Price */}
-        <div className="mb-5">
-          <div className="flex items-baseline gap-1.5">
-            <span className="text-slate-400 text-lg font-medium leading-none">R$</span>
-            <span className={`font-heading font-black leading-none ${plan.accentText}`} style={{ fontSize: "56px", lineHeight: 1 }}>
+        <div className="mb-3">
+          <div className="flex items-baseline gap-1">
+            <span className="text-slate-400 text-sm font-medium leading-none">R$</span>
+            <span className={`font-heading font-black leading-none ${plan.accentText}`} style={{ fontSize: "42px", lineHeight: 1 }}>
               {plan.price}
             </span>
           </div>
-          <p className="text-slate-600 text-xs mt-1.5">por aparelho / por sessao</p>
+          <p className="text-slate-600 text-[11px] mt-1">por aparelho / por sessao</p>
         </div>
 
         {/* Divider */}
         <div
-          className="h-px w-full mb-5"
+          className="h-px w-full mb-3"
           style={{ background: `linear-gradient(90deg, transparent, ${plan.accentColor}40, transparent)` }}
         />
 
-        {/* Services */}
-        <ul className="space-y-2.5 mb-6">
+        {/* Services — flex-1 pushes CTA to bottom */}
+        <ul className="space-y-2 mb-4 flex-1">
           {plan.services.map((service) => (
-            <li key={service} className="flex items-start gap-2.5">
-              <i className={`bi bi-check-circle-fill ${plan.accentText} text-sm mt-0.5 flex-shrink-0`} />
-              <span className="text-slate-300 text-sm">{service}</span>
+            <li key={service} className="flex items-start gap-2">
+              <i className={`bi bi-check-circle-fill ${plan.accentText} text-xs mt-0.5 flex-shrink-0`} />
+              <span className="text-slate-300 text-xs leading-snug">{service}</span>
             </li>
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA — always at the bottom */}
         <button
           onClick={handleWhatsApp}
-          className={`w-full flex items-center justify-center gap-2.5 py-3.5 rounded-2xl bg-gradient-to-r ${plan.btnGrad} text-white font-semibold text-sm hover:shadow-xl ${plan.btnGlow} hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer min-h-[48px]`}
+          className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r ${plan.btnGrad} text-white font-semibold text-xs hover:shadow-lg ${plan.btnGlow} hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer min-h-[44px]`}
         >
-          <i className="bi bi-whatsapp text-base" />
+          <i className="bi bi-whatsapp text-sm" />
           {plan.cta}
         </button>
       </div>
@@ -205,7 +205,7 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
 
 export default function Pricing() {
   return (
-    <section id="servicos" className="py-14 sm:py-24 relative overflow-hidden">
+    <section id="servicos" className="py-10 sm:py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#020C1B] via-[#071A2E]/60 to-[#020C1B]" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
@@ -221,20 +221,20 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-7 sm:mb-10"
         >
-          <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
+          <p className="text-blue-400 text-xs font-medium uppercase tracking-widest mb-2">
             Planos e precos
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gradient-white mb-2">
             Escolha o plano <span className="text-gradient">ideal</span>
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto text-base">
-            Transparencia total. Sem surpresas. Preco justo com qualidade premium e garantia em todos os servicos.
+          <p className="text-slate-400 max-w-xl mx-auto text-sm">
+            Transparencia total. Sem surpresas. Preco justo com garantia em todos os servicos.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5 lg:gap-6 items-start">
+        <div className="grid md:grid-cols-3 gap-4 lg:gap-5 items-stretch">
           {plans.map((plan, i) => (
             <PricingCard key={plan.id} plan={plan} index={i} />
           ))}

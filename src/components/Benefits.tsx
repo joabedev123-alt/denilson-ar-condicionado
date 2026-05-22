@@ -1,5 +1,6 @@
 ﻿"use client"
 
+import Image from "next/image"
 import { motion } from "motion/react"
 
 const benefits = [
@@ -50,6 +51,37 @@ export default function Benefits() {
             <br />
             <span className="text-gradient">a diferenca</span>
           </h2>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.7 }}
+          className="relative rounded-2xl overflow-hidden mb-10 sm:mb-14 h-44 sm:h-60"
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=1600&q=80&fit=crop&auto=format"
+            alt="Tecnico realizando manutencao de ar-condicionado"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#020C1B]/90 via-[#020C1B]/55 to-transparent" />
+          <div className="absolute inset-0 flex items-center px-8 sm:px-14">
+            <div className="flex flex-wrap gap-6 sm:gap-14">
+              {[
+                { num: "500+", label: "Clientes Atendidos" },
+                { num: "8+", label: "Anos de Experiencia" },
+                { num: "98%", label: "Satisfacao" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className="font-heading font-black text-3xl sm:text-4xl text-white leading-none">{stat.num}</div>
+                  <div className="text-slate-400 text-xs sm:text-sm mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

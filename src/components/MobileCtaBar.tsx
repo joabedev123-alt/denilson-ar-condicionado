@@ -21,7 +21,7 @@ export default function MobileCtaBar() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 120, opacity: 0 }}
           transition={{ type: "spring", stiffness: 220, damping: 28 }}
-          className="fixed bottom-0 left-0 right-0 z-40 sm:hidden px-4 pb-4 pt-3"
+          className="fixed bottom-0 left-0 right-0 z-40 sm:hidden px-4 pb-6 pt-3"
           style={{
             background: "linear-gradient(to top, rgba(7,4,26,0.98) 60%, transparent)",
           }}

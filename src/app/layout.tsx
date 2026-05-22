@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
@@ -15,6 +15,13 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+}
 
 export const metadata: Metadata = {
   title: "Denilson Ar Condicionado | Manutenção, Instalação e Limpeza",

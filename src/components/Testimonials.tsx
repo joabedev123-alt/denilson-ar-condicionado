@@ -120,7 +120,7 @@ export default function Testimonials() {
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={prev}
-            className="w-10 h-10 rounded-xl glass border border-blue-500/20 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-400/40 transition-all duration-200 cursor-pointer"
+            className="w-11 h-11 rounded-xl glass border border-blue-500/20 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-400/40 transition-all duration-200 cursor-pointer"
             aria-label="Anterior"
           >
             <i className="bi bi-chevron-left text-base" />
@@ -139,7 +139,7 @@ export default function Testimonials() {
           </div>
           <button
             onClick={next}
-            className="w-10 h-10 rounded-xl glass border border-blue-500/20 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-400/40 transition-all duration-200 cursor-pointer"
+            className="w-11 h-11 rounded-xl glass border border-blue-500/20 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-400/40 transition-all duration-200 cursor-pointer"
             aria-label="Proximo"
           >
             <i className="bi bi-chevron-right text-base" />

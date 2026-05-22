@@ -10,8 +10,8 @@ export default function FinalCTA() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80&fit=crop&auto=format"
-          alt=""
+          src="https://images.unsplash.com/photo-1436473849883-bb3464c23e93?w=1920&q=80&fit=crop&auto=format"
+          alt="Unidades de ar condicionado em predio"
           fill
           className="object-cover object-center"
           sizes="100vw"
@@ -38,7 +38,7 @@ export default function FinalCTA() {
             </div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
             <span className="text-gradient-white">Pronto para ter seu</span>
             <br />
             <span className="text-gradient">ar-condicionado</span>

@@ -4,7 +4,6 @@ import Benefits from "@/components/Benefits"
 import Pricing from "@/components/Pricing"
 import Differentials from "@/components/Differentials"
 import Process from "@/components/Process"
-import BeforeAfter from "@/components/BeforeAfter"
 import Testimonials from "@/components/Testimonials"
 import QuoteForm from "@/components/QuoteForm"
 import Regions from "@/components/Regions"
@@ -16,14 +15,13 @@ import MobileCtaBar from "@/components/MobileCtaBar"
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden pb-20 sm:pb-0">
       <Navbar />
       <Hero />
       <Benefits />
       <Pricing />
       <Differentials />
       <Process />
-      <BeforeAfter />
       <Testimonials />
       <QuoteForm />
       <Regions />

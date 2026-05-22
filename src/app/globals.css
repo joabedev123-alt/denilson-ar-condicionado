@@ -198,6 +198,13 @@
 /* ── Smooth scroll behavior ── */
 html { scroll-behavior: smooth; }
 
+/* ── Mobile safe area (iPhone notch / home indicator) ── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
+  }
+}
+
 /* ── Glassmorphism ── */
 .glass {
   background: rgba(7, 21, 37, 0.80);

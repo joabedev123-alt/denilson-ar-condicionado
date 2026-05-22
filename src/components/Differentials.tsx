@@ -1,5 +1,6 @@
 ﻿"use client"
 
+import Image from "next/image"
 import { motion } from "motion/react"
 
 const differentials = [
@@ -50,6 +51,29 @@ export default function Differentials() {
               <i className="bi bi-clipboard-check" />
               Solicitar orcamento gratis
             </a>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="relative mt-8 rounded-2xl overflow-hidden h-52"
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1596495717678-69df9f89c2a3?w=800&q=80&fit=crop&auto=format"
+                alt="Tecnico especializado em ar-condicionado"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#020C1B]/85 via-[#020C1B]/30 to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <div className="glass rounded-xl px-4 py-2.5 inline-flex items-center gap-2 border border-blue-500/25">
+                  <i className="bi bi-patch-check-fill text-blue-400 text-sm" />
+                  <span className="text-white text-xs font-medium">Tecnicos certificados e treinados</span>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Right grid */}

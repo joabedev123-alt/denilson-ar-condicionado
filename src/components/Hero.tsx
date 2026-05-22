@@ -57,8 +57,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80&fit=crop&auto=format"
-          alt=""
+          src="https://images.unsplash.com/photo-1718203862467-c33159fdc504?w=1920&q=80&fit=crop&auto=format"
+          alt="Ar condicionado em predio comercial"
           fill
           className="object-cover object-center"
           priority
@@ -128,7 +128,7 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1
               custom={1} variants={fadeUp} initial="hidden" animate="visible"
-              className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold leading-[1.05] tracking-tight"
+              className="text-3xl sm:text-5xl lg:text-7xl font-heading font-bold leading-[1.08] tracking-tight"
             >
               <span className="text-gradient-white">Seu Ar-Condicionado</span>
               <br />
