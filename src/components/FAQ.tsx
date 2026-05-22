@@ -34,7 +34,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section className="py-14 sm:py-24 relative overflow-hidden">
+    <section className="py-10 sm:py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
 

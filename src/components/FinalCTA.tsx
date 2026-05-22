@@ -6,7 +6,7 @@ import { WHATSAPP_URL } from "@/lib/constants"
 
 export default function FinalCTA() {
   return (
-    <section className="py-14 sm:py-24 relative overflow-hidden">
+    <section className="py-10 sm:py-16 relative overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image

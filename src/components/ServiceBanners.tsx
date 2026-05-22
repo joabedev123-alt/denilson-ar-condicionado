@@ -29,7 +29,7 @@ const services = [
     ],
     price: "150,00",
     priceLabel: null,
-    photo: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=900&q=85&fit=crop&auto=format",
+    photo: "/IMGS/img2.png",
     photoAlt: "Tecnico realizando limpeza do ar-condicionado",
     bottomItems: [
       { icon: "bi-heart-pulse", title: "MAIS SAUDE", desc: "Ar mais limpo e ambientes saudaveis." },
@@ -68,7 +68,7 @@ const services = [
     },
     price: "250,00",
     priceLabel: "LIMPEZA COMPLETA",
-    photo: "https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=900&q=85&fit=crop&auto=format",
+    photo: "/IMGS/img1.png",
     photoAlt: "Tecnico realizando limpeza profunda com equipamento especializado",
     bottomItems: [
       { icon: "bi-stars", title: "LIMPEZA PROFUNDA", desc: "Remove sujeiras e impurezas de todas as partes internas." },
@@ -102,7 +102,7 @@ const services = [
     ],
     price: "400,00",
     priceLabel: "LIMPEZA TOTAL",
-    photo: "https://images.unsplash.com/photo-1552853160-8ec65527b252?w=900&q=85&fit=crop&auto=format",
+    photo: "/IMGS/img3.png",
     photoAlt: "Pecas de ar-condicionado desmontadas para limpeza total",
     bottomItems: [
       { icon: "bi-stars", title: "AR MAIS LIMPO", desc: "Ambiente mais saudavel para voce e sua familia." },
@@ -129,8 +129,9 @@ function ServiceBanner({ service, index }: { service: Service; index: number }) 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.65, delay: index * 0.08 }}
-      className="rounded-2xl overflow-hidden border border-blue-800/25 shadow-2xl shadow-black/40"
+      className="rounded-2xl overflow-hidden border border-blue-800/25 shadow-2xl shadow-black/40 cursor-pointer hover:border-blue-500/40 transition-colors duration-300"
       style={{ background: "linear-gradient(135deg, #0B1E3D 0%, #0F2548 60%, #0B1E3D 100%)" }}
+      onClick={handleWhatsApp}
     >
       {/* ── Main body ── */}
       <div className="grid md:grid-cols-[58%_42%]">
@@ -233,7 +234,7 @@ function ServiceBanner({ service, index }: { service: Service; index: number }) 
       {/* ── Bottom strip ── */}
       <div className="border-t border-blue-900/40 px-5 sm:px-8 py-4"
         style={{ background: "rgba(6, 14, 32, 0.80)" }}>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
           {service.bottomItems.map((item) => (
             <div key={item.title} className="flex items-start gap-2">
               <i className={`bi ${item.icon} text-blue-400 text-[15px] flex-shrink-0 mt-0.5`} />
@@ -251,7 +252,7 @@ function ServiceBanner({ service, index }: { service: Service; index: number }) 
           {/* CTA column */}
           <button
             onClick={handleWhatsApp}
-            className="flex items-start gap-2 cursor-pointer hover:opacity-80 active:opacity-60 transition-opacity text-left"
+            className="flex items-start gap-2 cursor-pointer hover:opacity-80 active:opacity-60 transition-opacity text-left min-h-[44px]"
             aria-label="Agendar servico via WhatsApp"
           >
             <i className="bi bi-calendar-check text-blue-400 text-[15px] flex-shrink-0 mt-0.5" />

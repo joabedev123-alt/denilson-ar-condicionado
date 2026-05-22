@@ -128,11 +128,14 @@ export default function Footer() {
           <p className="text-slate-600 text-xs">
             &copy; {new Date().getFullYear()} Denilson Ar Condicionado. Todos os direitos reservados.
           </p>
-          <p className="text-slate-700 text-xs">
-            Desenvolvido com{" "}
-            <span className="text-blue-600">Next.js</span> &amp;{" "}
-            <span className="text-blue-600">TailwindCSS</span>
-          </p>
+          <a
+            href="https://camaly.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-500 text-xs hover:text-blue-400 transition-colors duration-200 cursor-pointer"
+          >
+            Produzida com 💙 por <span className="text-blue-400 font-semibold">CAMALY</span>
+          </a>
         </div>
       </div>
     </footer>

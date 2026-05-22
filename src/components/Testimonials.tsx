@@ -60,7 +60,7 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-14 sm:py-24 relative overflow-hidden">
+    <section className="py-10 sm:py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#071A2E] to-[#020C1B]" />
       <div className="absolute top-1/2 right-0 w-96 h-96 rounded-full bg-blue-600/5 blur-[120px]" />
 
@@ -75,7 +75,7 @@ export default function Testimonials() {
           <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
             Depoimentos
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
             O que nossos <span className="text-gradient">clientes</span> dizem
           </h2>
           <p className="text-slate-400 max-w-lg mx-auto text-base">

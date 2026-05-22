@@ -19,7 +19,7 @@ const regions = [
 
 export default function Regions() {
   return (
-    <section className="py-12 sm:py-20 relative overflow-hidden">
+    <section className="py-8 sm:py-14 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#020C1B] via-[#071A2E] to-[#020C1B]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">

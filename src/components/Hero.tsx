@@ -130,11 +130,9 @@ export default function Hero() {
               custom={1} variants={fadeUp} initial="hidden" animate="visible"
               className="text-3xl sm:text-5xl lg:text-7xl font-heading font-bold leading-[1.08] tracking-tight"
             >
-              <span className="text-gradient-white">Seu Ar-Condicionado</span>
+              <span className="text-gradient-white whitespace-nowrap">Seu Ar&#8209;Condicionado</span>
               <br />
-              <span className="text-gradient">Funcionando</span>
-              <br />
-              <span className="text-gradient-white">Como Novo.</span>
+              <span className="text-gradient">Funcionando </span><span className="text-gradient-white">Como Novo.</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -247,27 +245,7 @@ export default function Hero() {
               </div>
 
               {/* Floating badges */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8 }}
-                className="absolute -left-14 top-8 glass rounded-2xl px-3 py-2 flex items-center gap-2 border border-green-500/20"
-              >
-                <i className="bi bi-shield-check text-green-400 text-base" />
-                <span className="text-xs text-slate-300 whitespace-nowrap">Garantia incluida</span>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1.0 }}
-                className="absolute -right-12 bottom-16 glass rounded-2xl px-3 py-2 flex items-center gap-2 border border-blue-500/25"
-              >
-                <i className="bi bi-lightning-charge text-blue-400 text-base" />
-                <span className="text-xs text-slate-300 whitespace-nowrap">Resposta rapida</span>
-              </motion.div>
-
-              <motion.div
+<motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 }}

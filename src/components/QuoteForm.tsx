@@ -33,7 +33,7 @@ export default function QuoteForm() {
     "w-full bg-[#060F1E] border border-blue-500/15 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-blue-400/50 focus:ring-1 focus:ring-blue-400/30 transition-all duration-200"
 
   return (
-    <section id="contato" className="py-14 sm:py-24 relative overflow-hidden">
+    <section id="contato" className="py-10 sm:py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
 
