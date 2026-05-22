@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import Benefits from "@/components/Benefits"
 import Pricing from "@/components/Pricing"
+import ServiceBanners from "@/components/ServiceBanners"
 import Differentials from "@/components/Differentials"
 import Process from "@/components/Process"
 import Testimonials from "@/components/Testimonials"
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <Benefits />
       <Pricing />
+      <ServiceBanners />
       <Differentials />
       <Process />
       <Testimonials />
