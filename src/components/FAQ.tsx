@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
@@ -36,7 +36,7 @@ export default function FAQ() {
   return (
     <section className="py-14 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -46,7 +46,7 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-14"
         >
-          <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
+          <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
             Duvidas frequentes
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
@@ -54,7 +54,7 @@ export default function FAQ() {
           </h2>
           <p className="text-slate-400 text-base">
             Tire suas duvidas. Nao encontrou o que precisa?{" "}
-            <a href="#contato" className="text-violet-400 hover:text-violet-300 cursor-pointer transition-colors underline underline-offset-2">
+            <a href="#contato" className="text-blue-400 hover:text-blue-300 cursor-pointer transition-colors underline underline-offset-2">
               Fale conosco
             </a>.
           </p>
@@ -75,11 +75,11 @@ export default function FAQ() {
                   className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer group"
                   aria-expanded={open === i}
                 >
-                  <span className={`font-heading font-semibold text-base transition-colors duration-200 ${open === i ? "text-violet-300" : "text-white group-hover:text-violet-200"}`}>
+                  <span className={`font-heading font-semibold text-base transition-colors duration-200 ${open === i ? "text-blue-300" : "text-white group-hover:text-blue-200"}`}>
                     {faq.question}
                   </span>
-                  <div className={`w-8 h-8 rounded-lg border flex items-center justify-center flex-shrink-0 transition-all duration-300 ${open === i ? "border-violet-400/40 bg-violet-500/10 rotate-180" : "border-violet-500/20 group-hover:border-violet-400/30"}`}>
-                    <i className="bi bi-chevron-down text-violet-400 text-sm" />
+                  <div className={`w-8 h-8 rounded-lg border flex items-center justify-center flex-shrink-0 transition-all duration-300 ${open === i ? "border-blue-400/40 bg-blue-500/10 rotate-180" : "border-blue-500/20 group-hover:border-blue-400/30"}`}>
+                    <i className="bi bi-chevron-down text-blue-400 text-sm" />
                   </div>
                 </button>
 
@@ -92,7 +92,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-5 border-t border-violet-500/10">
+                      <div className="px-6 pb-5 border-t border-blue-500/10">
                         <p className="text-slate-400 text-sm leading-relaxed pt-4">{faq.answer}</p>
                       </div>
                     </motion.div>

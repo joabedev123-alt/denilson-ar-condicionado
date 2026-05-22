@@ -1,5 +1,6 @@
-"use client"
+﻿"use client"
 
+import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, type Variants } from "motion/react"
 import { WHATSAPP_URL } from "@/lib/constants"
@@ -11,14 +12,14 @@ const stats = [
   { value: "24h", label: "Tempo de resposta" },
 ]
 
-const particles = Array.from({ length: 24 }, (_, i) => ({
+const particles = Array.from({ length: 32 }, (_, i) => ({
   id: i,
-  left: `${(i * 4.3) % 100}%`,
-  size: i % 3 === 0 ? 3 : i % 3 === 1 ? 2 : 1.5,
-  duration: 10 + (i % 8) * 1.5,
-  delay: (i % 10) * 0.8,
-  color: i % 3 === 0 ? "#A78BFA" : i % 3 === 1 ? "#22D3EE" : "#818CF8",
-  opacity: 0.4 + (i % 4) * 0.15,
+  left: `${(i * 3.3) % 100}%`,
+  size: i % 3 === 0 ? 3.5 : i % 3 === 1 ? 2.5 : 1.5,
+  duration: 9 + (i % 9) * 1.4,
+  delay: (i % 12) * 0.65,
+  color: i % 4 === 0 ? "#93C5FD" : i % 4 === 1 ? "#22D3EE" : i % 4 === 2 ? "#60A5FA" : "#BAE6FD",
+  opacity: 0.35 + (i % 5) * 0.12,
 }))
 
 const fadeUp: Variants = {
@@ -31,8 +32,27 @@ const fadeUp: Variants = {
 }
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [mouse, setMouse] = useState({ x: -999, y: -999 })
+
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const onMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect()
+      setMouse({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+    }
+    const onLeave = () => setMouse({ x: -999, y: -999 })
+    el.addEventListener("mousemove", onMove, { passive: true })
+    el.addEventListener("mouseleave", onLeave, { passive: true })
+    return () => {
+      el.removeEventListener("mousemove", onMove)
+      el.removeEventListener("mouseleave", onLeave)
+    }
+  }, [])
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#07041A]">
+    <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden bg-[#020C1B]">
 
       {/* Background image */}
       <div className="absolute inset-0">
@@ -45,19 +65,28 @@ export default function Hero() {
           sizes="100vw"
         />
         {/* Cinematic dark overlay — gradient tinted violet */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#07041A]/92 via-[#0D0630]/85 to-[#07041A]/92" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#020C1B]/92 via-[#071A2E]/85 to-[#020C1B]/92" />
         {/* Extra violet tint */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#07041A] via-violet-950/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020C1B] via-blue-950/20 to-transparent" />
       </div>
 
       {/* Animated grid */}
       <div className="absolute inset-0 bg-grid opacity-50" />
 
+      {/* Mouse spotlight */}
+      <div
+        className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(700px circle at ${mouse.x}px ${mouse.y}px, rgba(59,130,246,0.10), transparent 50%)`,
+          opacity: mouse.x === -999 ? 0 : 1,
+        }}
+      />
+
       {/* Radial neon glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/4 w-[700px] h-[700px] rounded-full bg-violet-700/10 blur-[130px]" />
+        <div className="absolute top-1/3 left-1/4 w-[700px] h-[700px] rounded-full bg-blue-700/10 blur-[130px]" />
         <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] rounded-full bg-cyan-500/8 blur-[100px]" />
-        <div className="absolute bottom-1/4 left-1/2 w-[300px] h-[300px] rounded-full bg-indigo-600/8 blur-[80px]" />
+        <div className="absolute bottom-1/4 left-1/2 w-[300px] h-[300px] rounded-full bg-blue-500/8 blur-[80px]" />
       </div>
 
       {/* Floating particles */}
@@ -90,9 +119,9 @@ export default function Hero() {
             {/* Badge */}
             <motion.div
               custom={0} variants={fadeUp} initial="hidden" animate="visible"
-              className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass border border-violet-500/25 text-violet-300 text-xs sm:text-sm font-medium"
+              className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full glass border border-blue-500/25 text-blue-300 text-xs sm:text-sm font-medium"
             >
-              <span className="w-2 h-2 rounded-full bg-violet-400 animate-glow-pulse flex-shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-glow-pulse flex-shrink-0" />
               Tecnicos especializados disponiveis
             </motion.div>
 
@@ -124,7 +153,7 @@ export default function Hero() {
             >
               <a
                 href="#contato"
-                className="group flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold text-base hover:shadow-2xl hover:shadow-violet-500/40 hover:scale-[1.03] transition-all duration-300 cursor-pointer min-h-[48px]"
+                className="group flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-sky-400 text-white font-semibold text-base hover:shadow-2xl hover:shadow-blue-500/40 hover:scale-[1.03] transition-all duration-300 cursor-pointer min-h-[48px]"
               >
                 <i className="bi bi-clipboard-check text-lg" />
                 Solicitar Orcamento
@@ -134,7 +163,7 @@ export default function Hero() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl glass border border-violet-500/25 text-violet-200 font-semibold text-base hover:border-violet-400/45 hover:bg-violet-500/10 transition-all duration-300 cursor-pointer min-h-[48px]"
+                className="flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl glass border border-blue-500/25 text-blue-200 font-semibold text-base hover:border-blue-400/45 hover:bg-blue-500/10 transition-all duration-300 cursor-pointer min-h-[48px]"
               >
                 <i className="bi bi-whatsapp text-lg text-green-400" />
                 Falar no WhatsApp
@@ -165,23 +194,23 @@ export default function Hero() {
             className="hidden lg:flex items-center justify-center relative"
           >
             {/* Outer glow rings */}
-            <div className="absolute w-96 h-96 rounded-full border border-violet-500/15 animate-spin-slow" />
+            <div className="absolute w-96 h-96 rounded-full border border-blue-500/15 animate-spin-slow" />
             <div className="absolute w-80 h-80 rounded-full border border-cyan-500/10" style={{ animation: "spin-slow 14s linear infinite reverse" }} />
-            <div className="absolute w-64 h-64 rounded-full bg-violet-700/8 blur-[40px] animate-glow-pulse" />
+            <div className="absolute w-64 h-64 rounded-full bg-blue-700/8 blur-[40px] animate-glow-pulse" />
 
             {/* AC unit card */}
             <div className="relative w-80 animate-float">
-              <div className="glass rounded-3xl p-6 glow-border shadow-2xl shadow-violet-500/15">
+              <div className="glass rounded-3xl p-6 glow-border shadow-2xl shadow-blue-500/15">
                 {/* Unit header */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-xs text-violet-400 font-medium uppercase tracking-widest animate-neon">
+                  <div className="text-xs text-blue-400 font-medium uppercase tracking-widest animate-neon">
                     Ar Condicionado
                   </div>
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-glow-pulse" />
                 </div>
 
                 {/* Display panel */}
-                <div className="bg-[#0A0525] rounded-2xl p-5 mb-4 border border-violet-500/15 text-center">
+                <div className="bg-[#060F1E] rounded-2xl p-5 mb-4 border border-blue-500/15 text-center">
                   <div className="text-5xl font-heading font-bold text-gradient mb-1">22&deg;C</div>
                   <div className="text-slate-500 text-xs">Temperatura configurada</div>
                   <div className="flex justify-center gap-1 mt-3">
@@ -208,9 +237,9 @@ export default function Hero() {
                   ].map((ctrl) => (
                     <div
                       key={ctrl.label}
-                      className="flex flex-col items-center gap-1.5 p-2.5 rounded-xl bg-violet-500/8 border border-violet-500/15 hover:bg-violet-500/15 transition-colors cursor-pointer"
+                      className="flex flex-col items-center gap-1.5 p-2.5 rounded-xl bg-blue-500/8 border border-blue-500/15 hover:bg-blue-500/15 transition-colors cursor-pointer"
                     >
-                      <i className={`bi ${ctrl.icon} text-violet-400 text-lg`} />
+                      <i className={`bi ${ctrl.icon} text-blue-400 text-lg`} />
                       <span className="text-[10px] text-slate-500">{ctrl.label}</span>
                     </div>
                   ))}
@@ -232,9 +261,9 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.0 }}
-                className="absolute -right-12 bottom-16 glass rounded-2xl px-3 py-2 flex items-center gap-2 border border-violet-500/25"
+                className="absolute -right-12 bottom-16 glass rounded-2xl px-3 py-2 flex items-center gap-2 border border-blue-500/25"
               >
-                <i className="bi bi-lightning-charge text-violet-400 text-base" />
+                <i className="bi bi-lightning-charge text-blue-400 text-base" />
                 <span className="text-xs text-slate-300 whitespace-nowrap">Resposta rapida</span>
               </motion.div>
 
@@ -253,7 +282,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#07041A] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#020C1B] to-transparent" />
     </section>
   )
 }

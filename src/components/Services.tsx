@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { motion } from "motion/react"
@@ -58,12 +58,12 @@ export default function Services() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#07041A]/95 via-[#0D0630]/92 to-[#07041A]/95" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#07041A] via-violet-950/30 to-[#07041A]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#020C1B]/95 via-[#071A2E]/92 to-[#020C1B]/95" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020C1B] via-blue-950/30 to-[#020C1B]" />
       </div>
 
       <div className="absolute inset-0 bg-grid opacity-40" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -73,7 +73,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-16"
         >
-          <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
+          <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
             O que fazemos
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
@@ -92,13 +92,13 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30px" }}
               transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
-              className="group glass-card rounded-2xl p-5 glow-border-hover cursor-default flex flex-col gap-4 hover:bg-violet-500/5 transition-colors duration-300"
+              className="group glass-card rounded-2xl p-5 glow-border-hover cursor-default flex flex-col gap-4 hover:bg-blue-500/5 transition-colors duration-300"
             >
-              <div className="w-11 h-11 rounded-xl glass border border-violet-500/20 flex items-center justify-center group-hover:border-violet-400/40 group-hover:bg-violet-500/10 transition-all duration-300">
-                <i className={`bi ${service.icon} text-violet-400 text-xl group-hover:text-violet-300 transition-colors duration-300`} />
+              <div className="w-11 h-11 rounded-xl glass border border-blue-500/20 flex items-center justify-center group-hover:border-blue-400/40 group-hover:bg-blue-500/10 transition-all duration-300">
+                <i className={`bi ${service.icon} text-blue-400 text-xl group-hover:text-blue-300 transition-colors duration-300`} />
               </div>
               <div>
-                <h3 className="font-heading font-semibold text-base text-white mb-1.5 group-hover:text-violet-100 transition-colors duration-300">
+                <h3 className="font-heading font-semibold text-base text-white mb-1.5 group-hover:text-blue-100 transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-slate-500 text-sm leading-relaxed">
@@ -108,7 +108,7 @@ export default function Services() {
               <div className="mt-auto">
                 <a
                   href="#contato"
-                  className="text-violet-400 text-xs font-medium flex items-center gap-1 hover:gap-2 transition-all duration-200 cursor-pointer"
+                  className="text-blue-400 text-xs font-medium flex items-center gap-1 hover:gap-2 transition-all duration-200 cursor-pointer"
                 >
                   Solicitar
                   <i className="bi bi-arrow-right text-xs" />

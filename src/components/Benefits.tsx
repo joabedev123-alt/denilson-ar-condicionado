@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from "motion/react"
 
@@ -7,32 +7,32 @@ const benefits = [
     icon: "bi-lightning-charge",
     title: "Atendimento Rapido",
     description: "Resposta em ate 24 horas. Priorizamos urgencias para que voce nao fique sem conforto.",
-    color: "from-violet-600 to-violet-700",
+    color: "from-blue-600 to-blue-700",
   },
   {
     icon: "bi-patch-check",
     title: "Tecnicos Certificados",
     description: "Profissionais treinados, com anos de experiencia em todas as marcas do mercado.",
-    color: "from-indigo-500 to-indigo-600",
+    color: "from-blue-500 to-blue-500",
   },
   {
     icon: "bi-shield-check",
     title: "Garantia no Servico",
     description: "Todos os servicos com garantia de 30 dias. Qualidade que voce pode confiar.",
-    color: "from-violet-500 to-indigo-600",
+    color: "from-blue-500 to-blue-500",
   },
   {
     icon: "bi-chat-dots",
     title: "Orcamento Gratis",
     description: "Solicite seu orcamento sem compromisso direto pelo WhatsApp. Rapido e facil.",
-    color: "from-cyan-500 to-indigo-500",
+    color: "from-cyan-500 to-blue-500",
   },
 ]
 
 export default function Benefits() {
   return (
     <section className="py-14 sm:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#07041A] via-[#0D0630] to-[#07041A]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#020C1B] via-[#071A2E] to-[#020C1B]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -42,7 +42,7 @@ export default function Benefits() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-16"
         >
-          <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
+          <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
             Por que nos escolher
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white">

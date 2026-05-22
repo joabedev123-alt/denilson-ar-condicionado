@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import { motion } from "motion/react"
@@ -10,7 +10,7 @@ const testimonials = [
     initials: "CM",
     text: "O tecnico foi extremamente profissional e pontual. Fez a limpeza completa do meu ar e agora funciona como novo. Recomendo muito!",
     rating: 5,
-    color: "from-violet-600 to-indigo-600",
+    color: "from-blue-600 to-sky-400",
   },
   {
     name: "Ana Paula Silva",
@@ -18,7 +18,7 @@ const testimonials = [
     initials: "AP",
     text: "Chamei para manutencao preventiva dos ares do escritorio. Servico de alto nivel, rapido e com preco justo. Agora temos contrato mensal!",
     rating: 5,
-    color: "from-indigo-500 to-violet-600",
+    color: "from-blue-500 to-blue-600",
   },
   {
     name: "Roberto Ferreira",
@@ -26,7 +26,7 @@ const testimonials = [
     initials: "RF",
     text: "Melhor empresa de ar-condicionado que ja contratei. Detectaram um problema que outros tecnicos nao viram. Otimo atendimento pelo WhatsApp.",
     rating: 5,
-    color: "from-violet-500 to-purple-600",
+    color: "from-blue-500 to-purple-600",
   },
   {
     name: "Fernanda Costa",
@@ -34,7 +34,7 @@ const testimonials = [
     initials: "FC",
     text: "Meu ar estava com cheiro ruim e fazendo barulho. Em um dia eles limparam, recarregaram o gas e resolveram tudo. Nota 10!",
     rating: 5,
-    color: "from-cyan-500 to-indigo-500",
+    color: "from-cyan-500 to-blue-500",
   },
   {
     name: "Lucas Oliveira",
@@ -42,7 +42,7 @@ const testimonials = [
     initials: "LO",
     text: "Atendimento impecavel e preco honesto. Fizeram a instalacao de 4 splits no meu escritorio em um dia. Equipe super competente!",
     rating: 5,
-    color: "from-violet-400 to-cyan-500",
+    color: "from-blue-400 to-cyan-500",
   },
 ]
 
@@ -61,8 +61,8 @@ export default function Testimonials() {
 
   return (
     <section className="py-14 sm:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0D0630] to-[#07041A]" />
-      <div className="absolute top-1/2 right-0 w-96 h-96 rounded-full bg-violet-600/5 blur-[120px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#071A2E] to-[#020C1B]" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 rounded-full bg-blue-600/5 blur-[120px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -72,7 +72,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-16"
         >
-          <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
+          <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
             Depoimentos
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
@@ -120,7 +120,7 @@ export default function Testimonials() {
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={prev}
-            className="w-10 h-10 rounded-xl glass border border-violet-500/20 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/40 transition-all duration-200 cursor-pointer"
+            className="w-10 h-10 rounded-xl glass border border-blue-500/20 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-400/40 transition-all duration-200 cursor-pointer"
             aria-label="Anterior"
           >
             <i className="bi bi-chevron-left text-base" />
@@ -131,7 +131,7 @@ export default function Testimonials() {
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`rounded-full transition-all duration-300 cursor-pointer ${
-                  i === current ? "w-6 h-2 bg-violet-400" : "w-2 h-2 bg-slate-600 hover:bg-slate-400"
+                  i === current ? "w-6 h-2 bg-blue-400" : "w-2 h-2 bg-slate-600 hover:bg-slate-400"
                 }`}
                 aria-label={`Depoimento ${i + 1}`}
               />
@@ -139,7 +139,7 @@ export default function Testimonials() {
           </div>
           <button
             onClick={next}
-            className="w-10 h-10 rounded-xl glass border border-violet-500/20 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/40 transition-all duration-200 cursor-pointer"
+            className="w-10 h-10 rounded-xl glass border border-blue-500/20 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-400/40 transition-all duration-200 cursor-pointer"
             aria-label="Proximo"
           >
             <i className="bi bi-chevron-right text-base" />

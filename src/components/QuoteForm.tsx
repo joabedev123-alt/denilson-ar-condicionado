@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import { motion } from "motion/react"
@@ -30,12 +30,12 @@ export default function QuoteForm() {
   }
 
   const inputClass =
-    "w-full bg-[#0A0525] border border-violet-500/15 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-violet-400/50 focus:ring-1 focus:ring-violet-400/30 transition-all duration-200"
+    "w-full bg-[#060F1E] border border-blue-500/15 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-blue-400/50 focus:ring-1 focus:ring-blue-400/30 transition-all duration-200"
 
   return (
     <section id="contato" className="py-14 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
@@ -46,7 +46,7 @@ export default function QuoteForm() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
+            <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
               Orcamento gratis
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white leading-tight mb-6">
@@ -67,8 +67,8 @@ export default function QuoteForm() {
                 { icon: "bi-patch-check", text: "Tecnicos certificados" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className={`bi ${item.icon} text-violet-400 text-sm`} />
+                  <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <i className={`bi ${item.icon} text-blue-400 text-sm`} />
                   </div>
                   <span className="text-slate-300 text-sm">{item.text}</span>
                 </div>
@@ -115,9 +115,9 @@ export default function QuoteForm() {
                   onChange={handleChange}
                   className={`${inputClass} cursor-pointer`}
                 >
-                  <option value="" className="bg-[#0A0525]">Selecione o servico</option>
+                  <option value="" className="bg-[#060F1E]">Selecione o servico</option>
                   {serviceOptions.map((opt) => (
-                    <option key={opt} value={opt} className="bg-[#0A0525]">{opt}</option>
+                    <option key={opt} value={opt} className="bg-[#060F1E]">{opt}</option>
                   ))}
                 </select>
               </div>
@@ -135,7 +135,7 @@ export default function QuoteForm() {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold text-base hover:shadow-2xl hover:shadow-violet-500/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+                className="w-full flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-sky-400 text-white font-semibold text-base hover:shadow-2xl hover:shadow-blue-500/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
               >
                 <i className="bi bi-whatsapp text-lg text-green-300" />
                 Enviar via WhatsApp

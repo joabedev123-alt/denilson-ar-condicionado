@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from "motion/react"
 
@@ -33,7 +33,7 @@ export default function Process() {
   return (
     <section id="processo" className="py-14 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -43,7 +43,7 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-16"
         >
-          <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
+          <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
             Como funciona
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white mb-4">
@@ -57,7 +57,7 @@ export default function Process() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {/* Connecting line desktop */}
-          <div className="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-violet-500/0 via-violet-500/30 to-violet-500/0" />
+          <div className="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-blue-500/0 via-blue-500/30 to-blue-500/0" />
 
           {steps.map((step, i) => (
             <motion.div
@@ -69,10 +69,10 @@ export default function Process() {
               className="relative flex flex-col items-center text-center"
             >
               <div className="relative mb-6">
-                <div className="w-16 h-16 rounded-2xl glass border border-violet-500/25 flex items-center justify-center z-10 relative">
-                  <i className={`bi ${step.icon} text-violet-400 text-2xl`} />
+                <div className="w-16 h-16 rounded-2xl glass border border-blue-500/25 flex items-center justify-center z-10 relative">
+                  <i className={`bi ${step.icon} text-blue-400 text-2xl`} />
                 </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 rounded-lg bg-gradient-to-br from-violet-600 to-indigo-500 flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-6 h-6 rounded-lg bg-gradient-to-br from-blue-600 to-sky-400 flex items-center justify-center">
                   <span className="text-white text-[10px] font-bold">{step.number}</span>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { motion } from "motion/react"
@@ -16,13 +16,13 @@ export default function FinalCTA() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#07041A]/94 via-[#0D0630]/90 to-[#07041A]/94" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#07041A] via-violet-950/25 to-[#07041A]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#020C1B]/94 via-[#071A2E]/90 to-[#020C1B]/94" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020C1B] via-blue-950/25 to-[#020C1B]" />
       </div>
 
       <div className="absolute inset-0 bg-grid opacity-40" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-violet-600/8 blur-[120px] animate-glow-pulse" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-blue-600/8 blur-[120px] animate-glow-pulse" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
@@ -33,7 +33,7 @@ export default function FinalCTA() {
           className="space-y-8"
         >
           <div className="flex justify-center">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-500 flex items-center justify-center shadow-2xl shadow-violet-500/30 animate-glow-pulse">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-400 flex items-center justify-center shadow-2xl shadow-blue-500/30 animate-glow-pulse">
               <i className="bi bi-wind text-white text-2xl" />
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function FinalCTA() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold text-base sm:text-lg hover:shadow-2xl hover:shadow-violet-500/50 hover:scale-[1.04] transition-all duration-300 cursor-pointer min-h-[52px]"
+              className="group flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-sky-400 text-white font-semibold text-base sm:text-lg hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-[1.04] transition-all duration-300 cursor-pointer min-h-[52px]"
             >
               <i className="bi bi-whatsapp text-xl text-green-400" />
               Falar no WhatsApp
@@ -64,7 +64,7 @@ export default function FinalCTA() {
             </a>
             <a
               href="#contato"
-              className="flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 rounded-2xl glass border border-violet-500/25 text-violet-300 font-semibold text-base sm:text-lg hover:border-violet-400/45 hover:bg-violet-500/10 transition-all duration-300 cursor-pointer min-h-[52px]"
+              className="flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 rounded-2xl glass border border-blue-500/25 text-blue-300 font-semibold text-base sm:text-lg hover:border-blue-400/45 hover:bg-blue-500/10 transition-all duration-300 cursor-pointer min-h-[52px]"
             >
               <i className="bi bi-clipboard-check" />
               Solicitar Orcamento
@@ -78,7 +78,7 @@ export default function FinalCTA() {
               { icon: "bi-star-fill", text: "5.0 avaliacao" },
             ].map((item) => (
               <span key={item.text} className="flex items-center gap-1.5">
-                <i className={`bi ${item.icon} text-violet-500`} />
+                <i className={`bi ${item.icon} text-blue-500`} />
                 {item.text}
               </span>
             ))}

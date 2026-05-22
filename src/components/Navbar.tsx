@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "motion/react"
@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-5 py-3.5 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group cursor-pointer">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-violet-500/30 group-hover:shadow-violet-500/50 transition-shadow duration-300">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-400 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-shadow duration-300">
               <i className="bi bi-wind text-white text-base" />
             </div>
             <span className="font-heading font-bold text-lg leading-none">
@@ -49,10 +49,10 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-slate-400 hover:text-violet-400 transition-colors duration-200 text-sm font-medium cursor-pointer relative group"
+                className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm font-medium cursor-pointer relative group"
               >
                 {link.label}
-                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-violet-400 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-blue-400 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
@@ -62,7 +62,7 @@ export default function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white text-sm font-semibold hover:shadow-lg hover:shadow-violet-500/40 hover:scale-105 transition-all duration-300 cursor-pointer"
+            className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-semibold hover:shadow-lg hover:shadow-blue-500/40 hover:scale-105 transition-all duration-300 cursor-pointer"
           >
             <i className="bi bi-whatsapp text-base text-green-300" />
             WhatsApp
@@ -95,7 +95,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-slate-300 hover:text-violet-400 hover:bg-violet-500/10 rounded-xl px-4 py-3 text-base font-medium transition-all duration-200 cursor-pointer"
+                  className="text-slate-300 hover:text-blue-400 hover:bg-blue-500/10 rounded-xl px-4 py-3 text-base font-medium transition-all duration-200 cursor-pointer"
                 >
                   {link.label}
                 </a>
@@ -104,7 +104,7 @@ export default function Navbar() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold cursor-pointer"
+                className="mt-3 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-sky-400 text-white font-semibold cursor-pointer"
               >
                 <i className="bi bi-whatsapp text-green-300" />
                 Falar no WhatsApp

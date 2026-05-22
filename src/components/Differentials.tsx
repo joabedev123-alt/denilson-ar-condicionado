@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from "motion/react"
 
@@ -15,8 +15,8 @@ const differentials = [
 export default function Differentials() {
   return (
     <section id="diferenciais" className="py-14 sm:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#07041A] to-[#0D0630]" />
-      <div className="absolute top-1/2 left-0 w-96 h-96 rounded-full bg-violet-600/5 blur-[100px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#020C1B] to-[#071A2E]" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 rounded-full bg-blue-600/5 blur-[100px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -27,7 +27,7 @@ export default function Differentials() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-3">
+            <p className="text-blue-400 text-sm font-medium uppercase tracking-widest mb-3">
               Nossos diferenciais
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gradient-white leading-tight mb-6">
@@ -45,7 +45,7 @@ export default function Differentials() {
 
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold hover:shadow-xl hover:shadow-violet-500/30 hover:scale-[1.03] transition-all duration-300 cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-400 text-white font-semibold hover:shadow-xl hover:shadow-blue-500/30 hover:scale-[1.03] transition-all duration-300 cursor-pointer"
             >
               <i className="bi bi-clipboard-check" />
               Solicitar orcamento gratis
@@ -61,14 +61,14 @@ export default function Differentials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className={`group glass-card rounded-2xl p-4 glow-border-hover cursor-default flex gap-3 items-start hover:bg-violet-500/5 transition-colors duration-300 ${
+                className={`group glass-card rounded-2xl p-4 glow-border-hover cursor-default flex gap-3 items-start hover:bg-blue-500/5 transition-colors duration-300 ${
                   i === differentials.length - 1 && differentials.length % 2 !== 0
                     ? "sm:col-span-2"
                     : ""
                 }`}
               >
-                <div className="w-10 h-10 rounded-xl glass border border-violet-500/20 flex items-center justify-center flex-shrink-0 group-hover:border-violet-400/40 group-hover:bg-violet-500/10 transition-all duration-300">
-                  <i className={`bi ${d.icon} text-violet-400 text-base`} />
+                <div className="w-10 h-10 rounded-xl glass border border-blue-500/20 flex items-center justify-center flex-shrink-0 group-hover:border-blue-400/40 group-hover:bg-blue-500/10 transition-all duration-300">
+                  <i className={`bi ${d.icon} text-blue-400 text-base`} />
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-sm text-white mb-0.5">
