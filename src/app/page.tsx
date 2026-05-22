@@ -5,6 +5,7 @@ import Pricing from "@/components/Pricing"
 import ServiceBanners from "@/components/ServiceBanners"
 import Differentials from "@/components/Differentials"
 import Process from "@/components/Process"
+import InstallCTA from "@/components/InstallCTA"
 import Testimonials from "@/components/Testimonials"
 import QuoteForm from "@/components/QuoteForm"
 import Regions from "@/components/Regions"
@@ -24,6 +25,7 @@ export default function Home() {
       <ServiceBanners />
       <Differentials />
       <Process />
+      <InstallCTA />
       <Testimonials />
       <QuoteForm />
       <Regions />
